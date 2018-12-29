@@ -31,13 +31,13 @@ namespace CheeseMVC.ViewModels
 
             Categories = new List<SelectListItem>();
 
-            foreach(CheeseCategory cat in categories.ToList())
+            foreach(var cat in categories)
+            { 
                 Categories.Add(new SelectListItem {
-                    //Come back to change these placeholders
                     Value = cat.ID.ToString(),
                     Text = cat.Name
                 });
-
+            }
 
 
         }
